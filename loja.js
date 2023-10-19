@@ -44,7 +44,7 @@ class Loja {
         this.produtosDoEstoque = this.produtosDoEstoque.filter(item => item.nome !== produto.nome);
     }
     adicionarProdutoAoCarrinho(produto) {
-        const produtoEncontrado = this.produtosDoEstoque.find(item => item.nome = produto.nome);
+        const produtoEncontrado = this.produtosDoEstoque.find(item => item.nome == produto.nome);
         if (produtoEncontrado) {
             this.carrinhoDeCompra.adicionarProduto(produtoEncontrado);
             return "produto adicionado";
